@@ -57,3 +57,388 @@ IPE backtrace:
 HasCallStack backtrace:
   collectBacktraces, called at src/Server.hs:57:32 in backtrace-0.1.0.0-inplace:Server
 ```
+
+#### Pretty-printed stack shortly before the failing function is called
+
+```
+GenStgStackClosure
+  { ssc_info =
+      StgInfoTable
+        { entry = Nothing
+        , ptrs = 0
+        , nptrs = 0
+        , tipe = STACK
+        , srtlen = 0
+        , code = Nothing
+        }
+  , ssc_stack_size = 4093
+  , ssc_stack =
+      [ RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 23415432
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x4200410ab8 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 2
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 36384272
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x420040e808 / 1 , StackBox 0x420040f038 / 1 ]
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040f138 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 23453144
+                , code = Nothing
+                }
+          , stack_payload = [ StackBox 0x420040f108 ]
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x1ac3fa8 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 991250
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 23458416
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x420040add0
+              , StackBox 0x4200408560 / 1
+              , StackBox 0x1ab3300 / 3
+              , StackBox 0x1ab3838 / 1
+              , StackBox 0x1ab3968 / 2
+              , StackBox 0x4200409f98 / 1
+              , StackBox 0x420040b870 / 1
+              , StackWord 27672146
+              , StackBox 0x420040ae30 / 1
+              , StackBox 0x420040c7d0
+              , StackWord 283472087081
+              , StackWord 0
+              , StackWord 28132345
+              , StackWord 13
+              , StackBox 0x420040e6e8
+              , StackBox 0x420040e510 / 1
+              , StackBox 0x420040e1b8 / 2
+              , StackBox 0x420040e258 / 1
+              ]
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040e598 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 2067
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 23454984
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x4200408560 / 1
+              , StackBox 0x1ab3300 / 3
+              , StackBox 0x1ab3838 / 1
+              , StackBox 0x27a0058 / 1
+              , StackBox 0x1ab3968 / 2
+              , StackWord 51200
+              , StackBox 0x4200409f98 / 1
+              , StackBox 0x1ac16a8 / 2
+              , StackBox 0x420040b870 / 1
+              , StackBox 0x420040a540 / 2
+              , StackBox 0x1ab94e0 / 1
+              , StackBox 0x1a63e50 / 2
+              , StackBox 0x420040ae30 / 1
+              , StackBox 0x420040ae20 / 1
+              , StackBox 0x420040c7d0
+              , StackBox 0x420040c7e0
+              , StackBox 0x420040a358 / 1
+              , StackBox 0x420040c800 / 1
+              , StackBox 0x420040c828 / 1
+              ]
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040c840 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040b808 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 2
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x420040a648 / 2 , StackBox 0x27a0060 / 2 ]
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040b700 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 2
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x1be8ee8 / 2 , StackBox 0x420040ae30 / 1 ]
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x1be8f40 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload = []
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040ac98 / 2
+          }
+      , RetSmall
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 2
+                , nptrs = 0
+                , tipe = RET_SMALL
+                , srtlen = 0
+                , code = Nothing
+                }
+          , stack_payload =
+              [ StackBox 0x1aabfe0 / 2 , StackBox 0x420040ac80 / 1 ]
+          }
+      , CatchFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 1
+                , nptrs = 0
+                , tipe = CATCH_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          , handler = 0x420040a608 / 2
+          }
+      , StopFrame
+          { info_tbl =
+              StgInfoTable
+                { entry = Nothing
+                , ptrs = 0
+                , nptrs = 0
+                , tipe = STOP_FRAME
+                , srtlen = 0
+                , code = Nothing
+                }
+          }
+      ]
+  }
+```

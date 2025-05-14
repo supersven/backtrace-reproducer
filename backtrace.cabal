@@ -34,6 +34,8 @@ library
     text,
     wai,
     warp,
+    ghc-heap,
+    pretty-show
 
 executable server
   hs-source-dirs: app

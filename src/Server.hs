@@ -16,6 +16,10 @@ import Servant.Server.Generic
 import Effectful qualified as Eff
 import Effectful (Eff, IOE)
 
+import GHC.Stack.CloneStack
+import GHC.Exts.Stack
+import Text.Show.Pretty
+
 data Routes mode = Routes
   { index :: mode :- Get '[PlainText] Text
   , getDB :: mode :- "db" :> Get '[PlainText] Text
@@ -68,6 +72,14 @@ handleIndex = do
 
 handleDB :: Eff '[IOE] Text
 handleDB = do
+  -- Pretty-print the current stack to see stack frames
+  -- 1. Get a cold copy of the stack
+  stack <- liftIO $ cloneMyStack
+  -- 2. Decode it into a ghc-heap closure representation
+  stgClosure <- liftIO $ decodeStack stack
+  -- 3. pretty-print / output the StgStack closure representation
+  liftIO . putStrLn . ppShow $ stgClosure
+
   conn <- liftIO $ connectPostgreSQL ""
   _results :: [Only Int] <- liftIO $ query_ conn "select 2 + 2"
   pure (pack "DB")
