@@ -1,6 +1,12 @@
 # Backtraces
 
-Use GHC 9.10
+## Instructions
+
+* Use GHC 9.10
+* Commands:
+  1. `cabal build`
+  2. `cabal run`
+  3. `curl http://localhost:8085/db`
 
 ## Usage 1: Warp's own `setOnException`:
 
