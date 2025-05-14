@@ -1,0 +1,43 @@
+cabal-version: 3.6
+name: backtrace
+version: 0.1.0.0
+license: MIT
+license-file: LICENSE
+build-type: Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+  ghc-options: -Wall
+  default-extensions:
+    DataKinds
+    DeriveGeneric
+    DerivingStrategies
+    ImportQualifiedPost
+    OverloadedStrings
+    ScopedTypeVariables
+    TypeApplications
+    TypeOperators
+
+library
+  import: warnings
+  hs-source-dirs: src
+  exposed-modules:
+    Server
+
+  build-depends:
+    base,
+    effectful-core,
+    mtl,
+    postgresql-simple,
+    servant,
+    servant-server,
+    text,
+    wai,
+    warp,
+
+executable server
+  hs-source-dirs: app
+  main-is: Main.hs
+  build-depends:
+    backtrace,
+    base,

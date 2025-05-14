@@ -1,0 +1,32 @@
+packages:
+    ./
+
+with-compiler: ghc-9.10
+
+active-repositories: hackage.haskell.org
+
+tests: True
+
+package *
+  ghc-options: +RTS -A32m -RTS -finfo-table-map
+
+allow-newer: all
+
+package *
+  debug-info: 2
+
+package warp
+  flags: -x509
+
+package zlib
+  flags: -pkg-config
+
+source-repository-package
+    type: git
+    location: https://github.com/haskell-servant/servant
+    tag: 685885efc8b0af9cb999309722aaaaae818dfb51
+    subdir:
+      ./servant
+      ./servant-server
+      ./servant-client
+      ./servant-client-core
